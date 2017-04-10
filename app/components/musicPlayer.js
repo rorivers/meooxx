@@ -1,0 +1,51 @@
+import React , { Component }  from 'react'
+import {Button, Icon } from 'antd'
+
+
+class MusicPlayer extends Component {
+	state={
+		type: 'play-circle-o'
+	}
+	handleClick = () => {
+		
+		let type = this.state.type
+		
+		 type=(type == 'pause-circle-o'?'play-circle-o':'pause-circle-o') 
+		
+		
+		this.setState({
+			type : type
+		})
+		
+		if(!this.audio.paused) {
+			 this.audio.pause()
+			 return
+		 
+		}
+		this.audio.play()
+		 
+		
+	}
+	
+	
+	render() {
+			
+	  const { type } = this.state
+		return (
+			<Icon
+				style={{
+					cursor:'pointer'
+				}}
+				type={type} 
+				onClick={this.handleClick}  >
+			<audio 
+				ref={(audio)=>this.audio=audio}
+				src='../music/chengdu.mp3'>
+			</audio>
+			</Icon>
+	)
+	
+	}
+}
+
+export default MusicPlayer

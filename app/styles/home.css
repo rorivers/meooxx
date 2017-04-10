@@ -1,0 +1,18 @@
+
+
+.home {
+	width:100%;
+	float:left;
+	color: red;
+}
+
+.Nav {
+	padding:40px;
+	list-style: none;
+	
+}
+.nav li {
+	width:50px;
+	float:left;
+	padding:50px
+}

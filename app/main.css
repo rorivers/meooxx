@@ -1,0 +1,347 @@
+ * {
+	}
+	/***
+		* nav
+		*/
+	
+.nav-username {
+	font-size: 80px;
+	font-weight: bold;
+}
+	
+	
+	
+	
+	
+	
+	/* **
+		* topics cell
+		*/
+		
+.comment-item {
+	display: flex;
+	justify-content: space-between;
+	&:hover {
+		background-color: #f6f6f6;
+	};
+	width: 100%;
+	border-bottom: 2px solid #f6f6f6;
+}		
+		
+.cell {
+  display: flex;
+	line-height: 30px;
+	width: 80%;
+	padding: 15px 10px;
+	
+
+}
+
+
+@define-extend avatar {
+	width: 30px;
+	height: 30px;
+	border-radius: 3px;
+	margin-right: 3px;
+}
+
+.author-avatar {
+ @extend avatar;
+}
+
+#topic-title {
+	&:hover,&:visited {
+		color: #888;
+	};
+	font-size: 16px;
+	
+	white-space: nowrap;
+	max-width: 70%;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	
+	
+	& .title {
+		display: inline-block;
+	
+	}
+}
+
+.reply-count {
+	text-align: center;
+	width: 70px;
+	display: inline-block;
+	margin: auto 5px;
+	font-size: 14px;
+	width: 70px;
+}
+
+.count-of-visit {
+	font-size: 10px;
+}
+
+.count-of-replies {
+	color: #9e78c0;
+}
+
+
+.topic-last-reply {
+	font-size: 12px;
+	color: #759eb3;
+	min-width: 50px;
+	display: flex;
+  justify-content: flex-end;
+	align-items: center;
+	
+	
+}
+
+/* **
+ * breadnav
+ */
+.bread-nav {
+	
+	& .topic-tab {
+		
+		font-size: 20px;
+		margin: 0 10px;
+		color: #80bd01;
+		&:hover {
+			decoration: text;
+			color: #08c;
+		}
+			
+		}
+	& .currentTab {
+				
+				background-color:#80bd01;
+				display: inline-block;
+				text-align:center;
+				line-height: 20px;
+				width: 60px;
+				padding: 3px 4px;
+				color: #fff;
+				border-radius: 3px;
+		}
+		
+		padding: 8px 5px;
+	
+		background-color: #f6f6f6;
+	
+}
+ 
+/* **
+ * article
+ */
+ 
+ .content {
+	font-size: 14px;
+	font-weight:400;
+	padding: 20px;
+	width: 100%;
+	overflow: scroll;
+	
+}	
+
+.content p {
+	text-indent: 1em;
+	max-width: 100%;
+}
+
+.content img{
+		display: block;
+		margin: 20px auto;
+		width: 100%;
+		overflow:hedden;
+	}
+
+.article-title {
+		margin-left: 20px;
+		font-size: 22px;
+		font-weight: 700;
+		margin: 8px 0;
+		display: block;
+		line-height: 130%;
+		width: 70%;
+		vertical-align: bottom;
+}
+
+.article-info {
+	width:100%;
+	font-size: 12px;
+	margin: 0 10px;
+	
+}
+
+/* **
+ * comments 
+ */
+ 
+ .comment-header {
+	color: #333;
+	padding: 10px;
+	background-color: #f5f5f5;
+	border-radius: 3px 3px 0 0;
+	font-size: 16px;
+	display: block;
+	margin: 20px 0;
+	
+	
+}
+
+.user-avatar {
+	@extend avatar;
+
+	
+}
+
+
+
+.cell-comment {
+	& .reply-like {
+		font-size: 26px;
+		display: none;
+	};
+	&:hover {
+		.reply-like {
+			display: block;
+		}
+	}
+	
+	padding: 10px 15px 30px 15px;
+	border-bottom: 2px solid #f6f6f6;
+	color: #333;
+	& img {
+		max-width: 100%;
+	}
+}
+
+
+
+.user-comment {
+	display: flex;
+	justify-content: space-between; 
+	
+}
+
+.comment-loginname {
+	display: flex;
+	padding: 5px 10px; 
+	font-size: 14px;
+	font-weight: bold;
+
+}
+
+.commment-content {
+	padding: 5px 5px;
+	& p {
+		text-indent: 1em;
+		
+	}
+	margin: 5px 30px;
+	font-size: 15px;
+	line-height: 1.5em;
+	overflow: auto;
+}
+
+.comment-reply {
+	display: flex;
+	
+	font-size: 26px;
+	max-width: 100px;
+	& .ups {
+		color: #eb7350;
+	}
+	
+}
+
+.comment-input {
+	width: 50%;
+	margin: 10px 0 30px 0 ;
+	&.comment-input-mention {
+		height: 200px;
+	};
+}
+
+.reply-author {
+	background-color: #6ba44e;
+	color: #fff;
+	line-height: 30px;
+	
+	width: 30px;
+	margin: 5px 5px;
+	
+}
+
+.comment-reply-info {
+	color: #49a9ee;
+	font-size: 12px;
+	margin: 1px 10px;
+	
+}
+
+.comment-reply-hidden {
+	display: none;
+	width: 80%;
+	margin-left: 20px; 
+}
+
+.article-reply {
+	
+}
+
+
+/* *
+* affix login
+ */
+
+.affix-login {
+	font-size: 50px;
+	position: absolute;
+	bottom: 10%;
+	right: 10%;
+}
+
+/**
+ * login or profile node
+ */
+ 
+ .login-node {
+	 display: inline-block;
+	 margin-left: 300px; 
+ }
+
+ .user-profile {
+	 
+	 /* 设置成flex 文字就和图片Center */
+	 
+	 /* display: flex;   */
+	 width: 100px;
+	 height: 40px;
+	& img {
+		vertical-align: middle;
+		width: 30px;
+		height: 30px;
+		
+	}
+ }
+ 
+ .profile-button {
+	 margin : 20px 0;
+	 display: block;
+	 
+	 
+ }
+ 
+ .profile-noInfo { 
+	display: block;
+	margin: 20px 20px; 
+ }
+ 
+ .profile-messageItem {
+	 white-space: nowrap;
+	 max-width: 80%;
+	 text-overflow: ellipsis;
+	 overflow: hidden;
+ }
+ 

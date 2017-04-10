@@ -1,0 +1,17 @@
+{
+  "presets": [ "es2015", "stage-0", "react"],
+
+  /* if you want to use babel runtime, uncomment the following line */
+  // "plugins": ["transform-runtime"],
+  
+  "plugins": [
+    ["import", { libraryName: "antd", style: 'css' }] 
+		// `style: true` 会加载 less 文件
+  ],
+
+  "env": {
+    "build": {
+      "optional": ["optimisation", "minification"]
+    }
+  }
+}

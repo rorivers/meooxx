@@ -1,2 +1,2 @@
 # ReactSPA
-# 一个cnode单页面应用
+# һ��cnode��ҳ��Ӧ��
