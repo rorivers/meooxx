@@ -9,7 +9,7 @@
 
 ```
 ## ！！注意
->> *请使用yarn install yarn start*
+> * 请一定使用 yarn *
 
 ## 技术栈
 * 框架： React & React-dom
