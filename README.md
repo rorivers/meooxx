@@ -1,6 +1,16 @@
 ﻿# ReactSPA
 > 使用React全家桶SPA
 
+## 开始
+```
+#  git clone https://github.com/meooxx/ReactSPA.git
+#  yarn install
+#  yarn start 
+
+```
+## ！！注意
+>> *请使用yarn install yarn start*
+
 ## 技术栈
 * 框架： React & React-dom
 * UI组件： AntD
@@ -17,13 +27,7 @@
 * React-Router v4
 * PostCss Browserlist 兼容查询 > 5%
 * 支持浏览器自动刷新
-## Usage
-```
-# git clone https://github.com/meooxx/ReactSPA.git
-# npm install or yarn install
-# npm start or yarn start 
 
-```
 
 
 ## Aritcles
