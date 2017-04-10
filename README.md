@@ -27,8 +27,7 @@
 * React-Router v4
 * PostCss Browserlist 兼容查询 > 5%
 * 支持浏览器自动刷新
+* 用Redux管理状态流
 
-
-
-## Aritcles
-
+## end
+* thank you！
