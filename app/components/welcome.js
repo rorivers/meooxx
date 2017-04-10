@@ -21,7 +21,7 @@ import Something from '../components/Something'
 import ShowTopics from '../components/ShowTopics' 
 
 //carouse  暂时没用
-import CarouselFilm from '../components/carouselfilm'
+//import CarouselFilm from '../components/carouselfilm'
  
  
  
