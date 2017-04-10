@@ -40,7 +40,7 @@ class MusicPlayer extends Component {
 				onClick={this.handleClick}  >
 			<audio 
 				ref={(audio)=>this.audio=audio}
-				src='../music/chengdu.mp3'>
+				src='http://www.51mp3ring.com/softdown/at201732161020.mp3'>
 			</audio>
 			</Icon>
 	)
