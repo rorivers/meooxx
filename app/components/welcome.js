@@ -17,7 +17,7 @@ import TopicContent from './topiccontent'
 import { connect } from 'react-redux'
 import { Redirect, Link, Route } from 'react-router-dom'
 import { signout } from '../actions/login'
-import Something from '../components/Something'
+import PersonalProfile from '../components/PersonalProfile'
 import ShowTopics from '../components/ShowTopics' 
 
 //carouse  暂时没用
@@ -65,8 +65,8 @@ class Home extends Component {
 					</Link>
 				</Menu.Item>
 				<Menu.Item key = '2'>
-					<Link to={`${match.url}/something`}>
-						something
+					<Link to={`${match.url}/PersonalProfile`}>
+						个人的简历
 					</Link>
 				</Menu.Item>
 				<Menu.Item 
@@ -122,7 +122,17 @@ class Home extends Component {
 								}>
 							<span className='nav-username'>{user}</span>
 								<br />
-							<p>love you <Player /></p>
+							<p>
+								love you <Player/>
+							</p>
+							<span style={{
+								fontSize: 'small'
+							}}>
+								<a 
+									target='_blank'
+									href='https://github.com/meooxx/ReactSPA'>github </a>
+								<p>		showtopic用的cnode社区提供的API做的, 个人简历就是个人简历</p>
+							</span>
 							</div>		
 						)
 					}/>
@@ -130,7 +140,7 @@ class Home extends Component {
 					<Route 
 						path={`${match.url}/showtopics`} component={ShowTopics} />
 					<Route 
-						path={`${match.url}/something`} component={Something} />
+						path={`${match.url}/PersonalProfile`} component={PersonalProfile} />
 					<Route 
 						path={`${match.url}/article/:id`}
 						render={(props)=>{
@@ -147,7 +157,9 @@ class Home extends Component {
 			<Footer style={{
 				textAlign:'center',
 				width:'100%'}}>
-				super-q's space Design by super-q 
+				super-q's space Design by <a 
+						target='_blank'
+						href='https://github.com/meooxx/ReactSPA'>super-q </a>
 			</Footer>
 		</Layout >
 	) 

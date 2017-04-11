@@ -1,4 +1,4 @@
-import React , { Component }  from 'react'
+﻿import React , { Component }  from 'react'
 import { Icon } from 'antd'
 
 
@@ -33,6 +33,7 @@ class MusicPlayer extends Component {
 	  const { type } = this.state
 		return (
 			<Icon
+				title='献曲半首。。'
 				style={{
 					cursor:'pointer'
 				}}

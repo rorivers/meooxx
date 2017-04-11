@@ -1,4 +1,4 @@
-import { Modal } from 'antd';
+﻿//import { Modal } from 'antd';
 
 import React from 'react'
 
@@ -17,13 +17,7 @@ class ModalExample extends React.Component  {
 	render() {
 		return(
 		<div>
-			<button onClick={this.handleClick} >
-				click
-			</button>
-			<Modal 
-				visible ={this.state.isTrue}>
-				<input />
-			</Modal>
+			<p>个人简历</p>
 		</div>
 		)
 	}

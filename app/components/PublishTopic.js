@@ -80,7 +80,7 @@ class PublishTopic extends Component {
 	const { newArticleId, postInfo, postSuccess } = this.props
 	//需要关闭发表新帖子成功的的profile
 	const { closeInfo } = this.state
-	
+	console.log(postSuccess,closeInfo)
 	
 		return (
 			<div>
