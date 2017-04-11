@@ -30,8 +30,6 @@ module.exports = {
   module: {
     loaders: [
       { test: /\.css$/, 
-				// »•µÙ ºÊ»›babel-plugin-import
-			//include: path.resolve(__dirname, 'app'),
 			
 			loaders:
 				[

@@ -1,5 +1,5 @@
 ﻿import React, { Component } from 'react'
-import { Redirect, Route, Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import Topic from './Topic'
 
 import PublishTopic from './PublishTopic'
@@ -7,7 +7,7 @@ import PublishTopic from './PublishTopic'
 import LoginNode from './LoginNode'
 import { connect } from 'react-redux'
 //tabs 
-import { Alert, Modal, Pagination, Spin, Icon } from 'antd'
+import { Pagination, Spin } from 'antd'
 //css
 import '../main.css'
 
@@ -52,7 +52,7 @@ class ShowTopics extends Component {
 	} 
 	
 	//处理点击第几个页 处理函数
-	handlePageChange = (page, pageSize) => {
+	handlePageChange = (page) => {
 		const currentPage = this.state.page
 		if(!(currentPage ===   page) ) {
 			this.setState({
@@ -114,7 +114,7 @@ class ShowTopics extends Component {
 		
 	render(){
 		 
-		  const { messages, messageCount,  isFetching, match, dispatch, topics, publishTopics} = this.props
+		  const { messages, messageCount,  isFetching, dispatch, topics, publishTopics} = this.props
 			const { userInfo } = this.props
 			.userInfo
 			//get user/:loginname 得到
@@ -125,9 +125,11 @@ class ShowTopics extends Component {
 			const newArticleId = publishTopics.topicId
 			//message Count
 			const { data } = messageCount
-			const { failed } = publishTopics || false
-			const { isFething } = publishTopics
-		
+			
+			//注释掉 failed isFetching
+			/* *const { failed } =    publishTopics || false
+			* const { isFething } = 	publishTopics
+		  */
 			return (
 				<div >
 					<div className='bread-nav'>

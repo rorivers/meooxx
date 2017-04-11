@@ -1,11 +1,10 @@
-import React, { Component } from 'react'
+import React from 'react'
 import Welcome from '../components/welcome'
 import Login from '../components/login'
-import {Route, Redirect, Switch} from 'react-router-dom'
-import Nav from '../routers/Nav'
-import RouteWithSubR from '../Routers/RouteWithS'
+import { Route, Redirect, Switch } from 'react-router-dom'
 
-const App = (props) => {
+
+const App = () => {
 	
 	return	(
 		<div>

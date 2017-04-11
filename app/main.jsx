@@ -5,7 +5,7 @@ import thunk from 'redux-thunk'
 import { createLogger } from 'redux-logger'
 import { Provider} from 'react-redux'
 import { createStore ,applyMiddleware} from 'redux'
-import { HashRouter as Router,Route } from 'react-router-dom'
+import { HashRouter as Router } from 'react-router-dom'
 import reducers from './reducers/reducers'
 
 const middlewares = [thunk]

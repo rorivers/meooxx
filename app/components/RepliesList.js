@@ -3,7 +3,8 @@ import { message, Modal, Icon }  from 'antd'
 import '../main.css' 
 import ReplyTextarea from './ReplyTextarea'
 import transformDate from '../utils/transformDate'
-import { postReplies, postReplyUps} from '../actions/postReply'
+//del postReplies
+import { postReplyUps} from '../actions/postReply'
 
 import { fetchArticle } from '../actions/topicid' 
 
@@ -35,11 +36,11 @@ export default class RepliesList extends Component {
 	handleUpsClick = (e) => {
 		e.preventDefault()
 		
-		const count = this.state.ups 
+		//const count = this.state.ups 
 	
 		const { userInfo, accesstoken, dispatch, reply } = this.props		
 		
-		const up = this.state.up
+		//const up = this.state.up
 		const replyId = reply.id
 		const replyAuthorName = reply.author.loginname
 		const loginName = userInfo.loginname
@@ -83,11 +84,11 @@ export default class RepliesList extends Component {
 	}
 	
 	componentWillMount () {
-		const {id, reply } = this.props
+		const { id, reply } = this.props
 		const { ups } = reply
 		
-		const userUp = ups.some((up,index)=> {
-			return up == this.props.id
+		const userUp = ups.some((up)=> {
+			return up == id
 			})
 		
 		userUp && this.setState({
@@ -104,6 +105,7 @@ export default class RepliesList extends Component {
 	}
 	handleAvatarClick = (e) => {
 		e.preventDefault()
+		//保留的console
 		console.log('e, 不想写作者具体信息了')
 	}
 	
@@ -111,7 +113,8 @@ export default class RepliesList extends Component {
 	
 	render() {
 		const authorLoginname = this.props.loginname
-		const  {accesstoken, upsInfo, reply, dispatch, currentId } = this.props
+		//del upsInfo 点赞post的返回信息
+		const  {accesstoken, reply, dispatch, currentId } = this.props
 		const { ups } = this.state
 		const hidden = this.state.hidden
 	  const { loginname } = reply.author

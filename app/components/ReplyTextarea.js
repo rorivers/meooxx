@@ -24,9 +24,7 @@ class ReplyTextarea extends Component {
 			})
 			return
 		}
-		if(!accesstoken) {
-			console.log('no authoratical')
-		}
+		
 		
 		validateFields((err, value) => {
 			
@@ -44,7 +42,7 @@ class ReplyTextarea extends Component {
 	
 	
 	render() {
-		const { accesstoken, replyId, replyName } = this.props
+		const { replyName } = this.props
 		const { getFieldDecorator } = this.props.form
 		 const initialValue=replyName 
 		 ? `@${replyName} `

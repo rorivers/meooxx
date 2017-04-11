@@ -4,8 +4,8 @@ import React from 'react'
 class BreadNav extends React.Component {
 	
 	handleClick = (e) => {
-	
-		const { onClick, type,className } = this.props
+	//delete className
+		const { onClick, type } = this.props
 		
 		onClick(type)
 		e.preventDefault()
@@ -13,7 +13,8 @@ class BreadNav extends React.Component {
 	} 
 	
 	render() {
-	const { currentTab, active, type } = this.props 
+	const { currentTab, type } = this.props 
+	//去掉active！！
 	//当前TAB 就给予一个class
 	return (
 	 <a 

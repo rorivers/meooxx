@@ -1,5 +1,5 @@
 ﻿import React, { Component } from 'react' 
-import {Alert, Form, Modal, Affix, Icon, Input, Select } from 'antd'
+import {Alert, Modal, Affix, Icon } from 'antd'
 import { Link } from 'react-router-dom'
 import '../main.css'
 
@@ -75,7 +75,7 @@ class PublishTopic extends Component {
 	
   render() {
 
-	const  accesstoken  = this.props.userInfo
+	
 	//发表新的帖子的 id
 	const { newArticleId, postInfo, postSuccess } = this.props
 	//需要关闭发表新帖子成功的的profile

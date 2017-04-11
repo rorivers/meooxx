@@ -1,5 +1,6 @@
 ﻿import React, { Component } from 'react'
-import { markdown } from 'markdown'
+//多装了markedown插件 其实是服务端渲染的content
+//import { markdown } from 'markdown'
 import { fetchArticle } from '../actions/topicid' 
 import { Alert, Tag, Spin } from 'antd'
 //css
@@ -74,8 +75,8 @@ class Content extends Component {
 	const lastReplyAt = transformDate(last_reply_at)
 	const { data } = this.props.messageCount 
 	
-	//??
-	const { info } =  replyInfo || {success:false }
+	//注释掉info
+	//const { info } =  replyInfo || {success:false }
 	
 	
 	return (

@@ -4,7 +4,7 @@ import { RECEIVE_TOPICS, REQUEST_TOPICS } from'../actions/fetchTopic'
 
 import { publishTopics } from './publishTopics'
 //content reducer
-import { contentData,currentId } from './content'
+import { contentData } from './content'
 //userInfo
 import {  userInfo, loginnameInfo } from './userInfo'
 

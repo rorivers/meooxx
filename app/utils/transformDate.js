@@ -1,6 +1,6 @@
 export default function (date) {
-    var createAt = new Date(date);
-    var time = new Date().getTime() - createAt.getTime(); //现在的时间-传入的时间 = 相差的时间（单位 = 毫秒）
+    const createAt = new Date(date);
+    const time = new Date().getTime() - createAt.getTime(); //现在的时间-传入的时间 = 相差的时间（单位 = 毫秒）
     if (time < 0) {
         return '';
     } else if (time / 1000 < 60) {

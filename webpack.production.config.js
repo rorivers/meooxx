@@ -16,13 +16,42 @@ module.exports = {
   },
   module: {
     loaders: [
-      { test: /\.css$/, include: path.resolve(__dirname, 'app'), loader: 'style-loader!css-loader' },
-      { test: /\.js[x]?$/, include: path.resolve(__dirname, 'app'), exclude: /node_modules/, loader: 'babel-loader' }
+      { test: /\.css$/, 
+			
+			loaders:
+				[
+					'style-loader',
+          'css-loader?importLoaders=1',
+          'postcss-loader'
+				]
+				
+			},
+				
+      { test: /\.js[x]?$/, include: path.resolve(__dirname, 'app'), exclude: /node_modules/, loader: 'babel-loader' },
+			
+			{
+				test:/\.(jpeg|png|jpg|gif)$/,
+				loader:"url-loader?limit=8192"},
+				
+			//字体
+			{
+          // 专供iconfont方案使用的，后面会带一串时间戳，需要特别匹配到
+          test: /\.(woff|woff2|svg|eot|ttf)\??.*$/,
+          loader: 'url-loader?limit=8192&name=[path][name].[ext]'
+        }
     ]
+		/* postcss() {
+			return [
+				require('precss'),
+				require('autoprefixer')
+			];
+		} */
   },
+	
   resolve: {
     extensions: ['', '.js', '.jsx']
   },
+  
   plugins: [
     new webpack.optimize.DedupePlugin(),
     new uglifyJsPlugin({

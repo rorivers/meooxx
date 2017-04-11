@@ -1,6 +1,6 @@
 ﻿import React, { Component } from'react'
 //antd 样式，菜单 图标等
-import {Layout, Menu, Breadcrumb, Icon , Button, Badge} from 'antd'
+import {Layout, Menu, Icon } from 'antd'
 //侧边栏
 const { SubMenu } = Menu
 const { Header, Content,Footer, Sider } = Layout
@@ -15,7 +15,7 @@ import TopicContent from './topiccontent'
 
  
 import { connect } from 'react-redux'
-import { withRouter, Redirect, Link, Route } from 'react-router-dom'
+import { Redirect, Link, Route } from 'react-router-dom'
 import { signout } from '../actions/login'
 import Something from '../components/Something'
 import ShowTopics from '../components/ShowTopics' 

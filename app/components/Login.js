@@ -1,13 +1,12 @@
 import React, { Component } from 'react'
-import { Redirect ,Route} from 'react-router-dom'
-
-import Nav from '../routers/Nav'
+import { Redirect } from 'react-router-dom'
 
 
-import { user, login } from '../actions/login'
+
+import { login } from '../actions/login'
 import { connect } from 'react-redux'
 //Row Badge
-import {Message,Badge, Row , Col, Layout,Form, Input, Checkbox, Icon,Button} from 'antd'
+import {Message,Badge, Row , Col,Form, Input, Checkbox, Icon,Button} from 'antd'
 //已经登录状态处理
 import LoggedInfo from './loggedinfo'
 
@@ -53,8 +52,13 @@ class Login extends Component {
 				//reset field 不传入参数重置所有组件 
 				resetFields(['password'])
 				
-				const username = values.userName
-				const password = values.password
+				//注释掉username passwor
+				/* 
+				 * const username = 	values.userName
+				 * const password = values.password 
+				*/
+				
+				
 				this.setState({
 					validate:true
 				
@@ -63,7 +67,7 @@ class Login extends Component {
 				
 				
 				
-				this.st = setTimeout((disaptch)=>dispatch(login(values)),1000)
+				this.st = setTimeout(()=>dispatch(login(values)),1000)
 			
 				Message.success('login successful')
 			
@@ -97,8 +101,6 @@ class Login extends Component {
 		
 		const user = sessionStorage.getItem('user')
 		
-		 
-		const formItemLayout={wrapperCol:{span:6, offset:9} }
 	
 		if(user) {
 			

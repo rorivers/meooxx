@@ -18,7 +18,7 @@ export const messages = (state={hasReadMessages:[],hasNotReadMessages:[]}, actio
 	switch(action.type) {
 		
 		case RECEIVE_MESSAGES:
-		console.log(action)
+		
 		  return {
 				...state,
 				hasNotReadMessages: action.hasNotReadMessages,

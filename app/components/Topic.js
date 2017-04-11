@@ -1,13 +1,14 @@
-﻿import React, { Component } from 'react'
+﻿import React from 'react'
 import { Tag } from 'antd'
 import '../main.css'
-import { Link } from 'react-router-dom'
+//del Link
+//import { Link } from 'react-router-dom'
 
 import transformDate from '../utils/transformDate'
 
 const Topic = (props) => {
 	
-	const { topic, ind} = props
+	const { topic } = props
 	const avatarUrl = topic.author.avatar_url
 	const { top, tab, good } = topic
 	

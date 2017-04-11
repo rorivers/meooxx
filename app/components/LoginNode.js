@@ -1,8 +1,10 @@
 ﻿import React, { Component } from 'react'
-import { Badge, Message, Form, Input, Modal, Button } from 'antd'
-import { Link } from 'react-router-dom' 
+import { Badge, Button } from 'antd'
+//del link
+//import { Link } from 'react-router-dom' 
+
 import { fetchUser, fetchLoginname } from '../actions/fetchUser'
-import Topic from './Topic'
+//import Topic from './Topic'
 import LoginModal from './LoginModal'
 import { fetchArticle } from '../actions/topicid'
  import { fetchMessageCount,fetchMessages } from '../actions/fetchMessage'
@@ -52,7 +54,7 @@ class LoginNode extends Component {
 	
   login = () => {
 	const { validateFields } = this.modal
-	const { userInfo, dispatch } = this.props
+	const { dispatch } = this.props
 	
 	validateFields((err, value) => {
 		const accesstoken = value.loginNode
@@ -62,13 +64,17 @@ class LoginNode extends Component {
     	}
 		dispatch(fetchUser(accesstoken))
 		dispatch(fetchMessageCount(accesstoken))
+		
+		//保留的console
 		console.log('need to rewrite')
+		
+		
 		sessionStorage.setItem('userToken', accesstoken)
 		
 		
 		//这边有问题 是这个 diaptch请求是异步的 没有获得 返回信息  下面的就执行了所以 会有bug   暂时放一下
 		
-		
+		//保留的console
 		console.log('bug, 能力不够 需要重新写')
       this.setState({
 				hidden: false,

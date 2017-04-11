@@ -6,7 +6,8 @@ import MessageItem from './MessageItem'
 
 const ProfileModal = (props) => {
 	//点击 profile的 往期消息文章链接
-	const {handleArticleClick, logout, loginname, loginnameInfo} = props
+	const {handleArticleClick, logout, loginnameInfo} = props
+	//去掉了porps中的loginname以防bug备注
 	//最近回复的data
 	const info  = loginnameInfo.loginnameInfo || { data:{} }
 	const { data } = info 

@@ -30,13 +30,14 @@ export const postTopics = (data, accesstoken) => dispatch=> {
 	const {  tab, title } = data
 	const { content } = data 
 	const bodyPart =content ?  `accesstoken=${accesstoken}&content=${content}&tab=${tab}&title=${title}` : `accesstoken=${accesstoken}&tab=${tab}&title=${title}` 
+	
 	dispatch(requestPost())
 		return fetch( 'https://cnodejs.org/api/v1/topics',{
 			method: 'POST',
 			headers: {
 					'content-Type': 'application/x-www-form-urlencoded'               
 				},
-			body:`accesstoken=${accesstoken}&content=${content}&tab=${tab}&title=${title}`
+			body:bodyPart
 		})
 	.then(res=>res.json())
 	.then(json=>{

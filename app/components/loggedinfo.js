@@ -1,5 +1,6 @@
 import React from 'react'
-import { Redirect ,Route} from 'react-router-dom'
+import { Redirect } from 'react-router-dom'
+
 //已经登录的信息
 class LoggedInfo extends React.Component {
 	state={
@@ -21,6 +22,7 @@ class LoggedInfo extends React.Component {
 				time:stateTime
 		})
 		if(stateTime <= 0) {
+			
 		 	this.setState({
 				shouldRedirect:true
 		}) 
@@ -35,10 +37,12 @@ class LoggedInfo extends React.Component {
 	
 	
 	render(){
-		const {user} = this.props
-		const {time, shouldRedirect} = this.state
+		const { user } = this.props
+		const { time, shouldRedirect } = this.state
 		
-		if(shouldRedirect) return <Redirect push to='/nav' />
+		if(shouldRedirect) {
+			return (
+				<Redirect push to='/nav' />) }
 	return(
 		<h1>
 			hello <strong>{user}</strong>,已经登录。{time}秒后跳转...

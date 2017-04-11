@@ -2,7 +2,7 @@
 
 export const RECEIVE_MESSAGES = 'REVEIVE_MESSAGES'
 
-const receiveMessageCount = (data, accesstoken) => ({
+const receiveMessageCount = (data) => ({
 	type: RECEIVE_MESSAGE_COUNT,
 	count: data
 })

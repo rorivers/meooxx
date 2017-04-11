@@ -1,4 +1,4 @@
-﻿import React, { Component } from 'react'
+﻿import React from 'react'
 import { Modal, Form, Input } from 'antd'
 
 //form.create()() antd 提供的的方法提供 getFieldDecorator， validateFeilds 方法
