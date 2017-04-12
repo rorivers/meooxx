@@ -1,6 +1,7 @@
 ﻿//import { Modal } from 'antd';
 
 import React from 'react'
+import Rezume from './Rezume'
 
 class ModalExample extends React.Component  {
 	
@@ -17,7 +18,7 @@ class ModalExample extends React.Component  {
 	render() {
 		return(
 		<div>
-			<p>个人简历</p>
+			<Rezume />
 		</div>
 		)
 	}
