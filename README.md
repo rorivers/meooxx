@@ -4,6 +4,7 @@
 ## 开始
 ```
 #  git clone https://github.com/meooxx/ReactSPA.git
+#  cd ReactSPA  
 #  yarn install
 #  yarn start 
 
@@ -21,7 +22,7 @@
 * 检查: eslint
 * 抓取数据: Fetch
 * 打包构建: Bable, webpack
-* 包管理: Npm
+* 包管理工具: Npm yarn
 
 ## 优势
 * 支持Es6
