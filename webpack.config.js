@@ -44,7 +44,7 @@ module.exports = {
 			
 			{
 				test:/\.(jpeg|png|jpg|gif)$/,
-				loader:"url-loader?limit=8192"},
+				loader:"url-loader?limit=8192&name=images/[name].[ext]"},
 				
 			//×ÖÌå
 			{

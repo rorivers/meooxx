@@ -11,7 +11,8 @@ module.exports = {
   ],
   output: {
     path: path.resolve(__dirname, 'build'),
-    publicPath: '/',
+		//相对路径
+    publicPath: './',
     filename: './bundle.js'
   },
   module: {
@@ -29,9 +30,9 @@ module.exports = {
 				
       { test: /\.js[x]?$/, include: path.resolve(__dirname, 'app'), exclude: /node_modules/, loader: 'babel-loader' },
 			
-			{
+			 {
 				test:/\.(jpeg|png|jpg|gif)$/,
-				loader:"url-loader?limit=8192"},
+				loader:"url-loader?limit=8192&name=images/[name].[ext]"}, 
 				
 			//字体
 			{
