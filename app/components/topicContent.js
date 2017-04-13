@@ -166,7 +166,6 @@ const mapStateToProps = (state) => {
 	const { replyInfo, upsInfo } = state
 	const { userInfo, loginnameInfo } = state
 	const { messages, messageCount } = state
-	console.log(messages)
 	return {
 		replyInfo,
 		upsInfo,

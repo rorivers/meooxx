@@ -1,0 +1,24 @@
+﻿validate-commit-msg  的配置文件从package中分离出来不用的但是保留的
+ "config": {
+    "validate-commit-msg": {
+    "types": [
+       "feat",
+       "fix",
+       "docs",
+       "style",
+       "refactor",
+        "perf",
+       "test",
+       "chore",
+       "revert"
+    ],
+   "warnOnFail": false,
+      "maxSubjectLength": 100
+    },
+	 
+    "commitizen": {
+      "path": "node_modules/cz-conventional-changelog"
+    }
+  }
+	
+	

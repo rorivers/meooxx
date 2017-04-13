@@ -1,5 +1,7 @@
 ﻿import React from 'react'
 import IMGone from '../images/one.jpg'
+
+ 
 import avatar from '../images/avatar.jpg'
 import { Timeline, Progress, Icon, Row, Col } from 'antd'
 
@@ -9,7 +11,7 @@ const Rezume = () => {
 					fontWeight: 'bold',
 					fontSize: '1em',
 					}}>
-			<div 
+			<div  
 					style={{
 						color: '#fff',
 						width: '100%',
@@ -53,7 +55,9 @@ const Rezume = () => {
 					</Col>
 				</Row>
 			</div>
-			<div>
+			<div style={{
+				margin: '5% 3%'
+			}}>
 				<span > 
 				<h2>你好，</h2>
 				<p>  我叫郑少秋，是一名应届毕业生，喜欢web，希望能在技术至上公司从事前端开发的工作
@@ -99,7 +103,9 @@ const Rezume = () => {
 						width:'100%',
 						display: 'block'}}>技能
 					</span>
-					<Row>
+					<Row style={{
+						marginTop: '10%'
+					}}>
 						<Col span={4}>
 								<Progress 
 									status='success'
@@ -168,7 +174,7 @@ const Rezume = () => {
 									type='circle' 
 									format={() => 'git'}/>
 						</Col>
-					</Row>						
+					</Row>		
 				</div>
 			</Col>
 			

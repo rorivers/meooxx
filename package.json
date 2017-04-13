@@ -70,31 +70,19 @@
     "webpack": "latest",
     "webpack-dev-server": "latest"
   },
+	
   "keywords": [
     "es6",
     "web app",
     "boilerplate"
   ],
+	
   "author": "superq",
-  "license": "MIT",
-  "config": {
-    "validate-commit-msg": {
-      "types": [
-        "feat",
-        "fix",
-        "docs",
-        "style",
-        "refactor",
-        "perf",
-        "test",
-        "chore",
-        "revert"
-      ],
-      "warnOnFail": false,
-      "maxSubjectLength": 100
-    },
-    "commitizen": {
-      "path": "node_modules/cz-conventional-changelog"
-    }
-  }
+  "license": "MIT"
+   
+	 
 }
+
+
+ 
+
