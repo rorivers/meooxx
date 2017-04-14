@@ -61,6 +61,7 @@ const Rezume = () => {
 				<span > 
 				<h2>你好，</h2>
 				<p>  我叫郑少秋，是一名应届毕业生，喜欢web，希望能在技术至上公司从事前端开发的工作
+				<a href='https://github.com/meooxx/resume' target='_blank'>markdown格式详细的简历</a>
 				</p>
 				</span>
 			</div>
