@@ -113,7 +113,7 @@ class Login extends Component {
 		  <div>
 			  <h1 style={{
 					color: '#000',
-					width: '20%',
+					width: '25%',
 					margin:'50px auto'
 				}}>super-q space {' '}
 					<a href='#' onClick={this.handleIconClick}>
