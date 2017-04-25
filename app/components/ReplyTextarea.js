@@ -1,10 +1,13 @@
 ﻿import React, { Component } from 'react'
-import { Modal , Form, Input, Button } from 'antd'
+import { Alert, Modal , Form, Input, Button } from 'antd'
 import { postReplies } from '../actions/postReply'
 
 
 
 class ReplyTextarea extends Component {
+  state = {
+    replyInfoShow: false
+  }
 	
 	handleButtonClick = () => {
 		
@@ -30,6 +33,9 @@ class ReplyTextarea extends Component {
 			
 			if(err || !value.content) return
 			dispatch(postReplies(value, currentId, replyId, accesstoken ))
+      this.setState({
+        replyInfoShow:true
+      })
 			/* **
 			 * 再次请求 reply列表刷新 得到评论？
 			*/
@@ -42,12 +48,13 @@ class ReplyTextarea extends Component {
 	
 	
 	render() {
-		const { replyName } = this.props
+		const { replyName, replyInfo } = this.props
 		const { getFieldDecorator } = this.props.form
 		 const initialValue=replyName 
 		 ? `@${replyName} `
 		: ''
-		
+    const { replyInfoShow }= this.state
+		//console.log(replyInfoShow)
 		
 		return(
 		  <Form > 
@@ -71,6 +78,15 @@ class ReplyTextarea extends Component {
 						reply
 				 </Button>
 				</Form.Item>
+        {replyInfoShow&&replyInfo.info&&
+        replyInfo.info.success
+        &&<span>
+						<Alert 
+							type='success'
+							message={'回复成功'} />
+						</span>
+					
+				}
 		 </Form>
 		)
 	}

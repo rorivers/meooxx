@@ -185,6 +185,7 @@ export default class RepliesList extends Component {
 						dispatch={dispatch}
 						currentId={currentId}
 						replyName={loginname}
+            replyInfo={''}
 					/>
 				</span>
 			</div>

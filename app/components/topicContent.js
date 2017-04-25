@@ -2,7 +2,7 @@
 //多装了markedown插件 其实是服务端渲染的content
 //import { markdown } from 'markdown'
 import { fetchArticle } from '../actions/topicid' 
-import { Alert, Tag, Spin } from 'antd'
+import { Tag, Spin } from 'antd'
 //css
 import '../main.css'
 //
@@ -142,18 +142,13 @@ class Content extends Component {
 						replyId={''}
 						currentId={currentId}
 						accesstoken = {this.props.userInfo.accesstoken}
-						dispatch={dispatch}/>
+						dispatch={dispatch}
+            replyInfo={replyInfo}
+            />
 				</span>
 				
 				
-				{replyInfo.info&&replyInfo.info.success&&
-					<span>
-						<Alert 
-							type='success'
-							message={'回复成功'} />
-						</span>
-					
-				}
+				
 			</div>
 		</Spin >
 	) 
