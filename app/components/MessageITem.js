@@ -1,6 +1,7 @@
-﻿import React from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import "../main.css";
+
 const MessagesItem = props => {
   const { author } = props;
   const { topic } = props;
@@ -19,3 +20,4 @@ const MessagesItem = props => {
 };
 
 export default MessagesItem;
+
