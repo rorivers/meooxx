@@ -66,7 +66,7 @@ class LoginNode extends Component {
 		dispatch(fetchMessageCount(accesstoken))
 		
 		//保留的console
-		console.log('need to rewrite')
+		console.log('need to rewrite') //eslint-disable-line
 		
 		
 		sessionStorage.setItem('userToken', accesstoken)
@@ -75,7 +75,7 @@ class LoginNode extends Component {
 		//这边有问题 是这个 diaptch请求是异步的 没有获得 返回信息  下面的就执行了所以 会有bug   暂时放一下
 		
 		//保留的console
-		console.log('bug, 能力不够 需要重新写')
+		console.log('bug, 能力不够 需要重新写')//eslint-disable-line
       this.setState({
 				hidden: false,
 				logout: false

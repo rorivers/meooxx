@@ -7,7 +7,7 @@ const MessagesItem = (props) => {
 	//del reply
 	
 	//console保留
-	console.log('可能会有点赞等type类型 没遇到暂时都为回复')
+	console.log('可能会有点赞等type类型 没遇到暂时都为回复') //eslint-disable-line
 	return(
 		<div className='profile-messageItem'>
 			<span>

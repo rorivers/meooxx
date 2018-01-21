@@ -106,7 +106,7 @@ export default class RepliesList extends Component {
 	handleAvatarClick = (e) => {
 		e.preventDefault()
 		//保留的console
-		console.log('e, 不想写作者具体信息了')
+		console.log('e, 不想写作者具体信息了')//eslint-disable-line
 	}
 	
 	
