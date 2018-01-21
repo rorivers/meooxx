@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Redirect } from "react-router-dom";
 
-import { login } from "../actions/Login";
+import { login } from "../actions/login";
 import { connect } from "react-redux";
 //Row Badge
 import {
