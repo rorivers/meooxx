@@ -1,4 +1,4 @@
-﻿# ReactSPA[![Build Status](https://travis-ci.org/meooxx/ReactSPA.svg?branch=master)](https://travis-ci.org/meooxx/ReactSPA)
+﻿# ReactSPA[![Build Status](https://travis-ci.org/meooxx/ReactSPA.svg?branch=master)](https://travis-ci.org/meooxx/meooxx)
 > 使用React全家桶SPA
 ## [在线 github page 地址](https://meooxx.github.io/meooxx/)
 ## 开始
