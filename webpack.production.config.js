@@ -11,7 +11,7 @@ module.exports = {
   ],
   output: {
     path: path.resolve(__dirname, 'build'),
-		//Ïà¶ÔÂ·¾¶
+		//ï¿½ï¿½ï¿½Â·ï¿½ï¿½
     publicPath: './',
     filename: './bundle.js'
   },
@@ -34,9 +34,9 @@ module.exports = {
 				test:/\.(jpeg|png|jpg|gif)$/,
 				loader:"url-loader?limit=8192&name=images/[name].[ext]"}, 
 				
-			//×ÖÌå
+			//ï¿½ï¿½ï¿½ï¿½
 			{
-          // ×¨¹©iconfont·½°¸Ê¹ÓÃµÄ£¬ºóÃæ»á´øÒ»´®Ê±¼ä´Á£¬ÐèÒªÌØ±ðÆ¥Åäµ½
+          // ×¨ï¿½ï¿½iconfontï¿½ï¿½ï¿½ï¿½Ê¹ï¿½ÃµÄ£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Òªï¿½Ø±ï¿½Æ¥ï¿½äµ½
           test: /\.(woff|woff2|svg|eot|ttf)\??.*$/,
           loader: 'url-loader?limit=8192&name=[path][name].[ext]'
         }

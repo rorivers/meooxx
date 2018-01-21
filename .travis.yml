@@ -3,7 +3,7 @@ language: node_js
 node_js:
   - 8
 
-script: yarn run deploy
+script: yarn run build
 deploy:
   local-dir: build
   provider: pages
