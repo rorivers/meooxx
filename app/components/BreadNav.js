@@ -1,31 +1,29 @@
-import React from 'react'
+import React from "react";
 
-//nav 
+//nav
 class BreadNav extends React.Component {
-	
-	handleClick = (e) => {
-	//delete className
-		const { onClick, type } = this.props
-		
-		onClick(type)
-		e.preventDefault()
-		
-	} 
-	
-	render() {
-	const { currentTab, type } = this.props 
-	//È¥µôactive£¡£¡
-	//µ±Ç°TAB ¾Í¸øÓèÒ»¸öclass
-	return (
-	 <a 
-		className={currentTab==type?'topic-tab currentTab':'topic-tab'}
-		href ='#' 
-		onClick ={this.handleClick}>
-		{type}
-	 </a>
-	
-	)
-}
+  handleClick = e => {
+    //delete className
+    const { onClick, type } = this.props;
+
+    onClick(type);
+    e.preventDefault();
+  };
+
+  render() {
+    const { currentTab, type } = this.props;
+    //È¥ï¿½ï¿½activeï¿½ï¿½ï¿½ï¿½
+    //ï¿½ï¿½Ç°TAB ï¿½Í¸ï¿½ï¿½ï¿½Ò»ï¿½ï¿½class
+    return (
+      <a
+        className={currentTab == type ? "topic-tab currentTab" : "topic-tab"}
+        href="#"
+        onClick={this.handleClick}
+      >
+        {type}
+      </a>
+    );
+  }
 }
 
-export default BreadNav
+export default BreadNav;
