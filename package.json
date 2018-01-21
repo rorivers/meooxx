@@ -4,7 +4,7 @@
   "description": "A boilerplate for React-Babel-Webpack project",
   "main": "app/main.jsx",
   "scripts": {
-    "precommit": "npm run lint",
+    "precommit": "npm run lint && prettier --no-config ./app/components/*",
     "lint": "eslint --fix --cache --ignore-path .gitignore --ext .jsx,.js --format=node_modules/eslint-formatter-pretty .",
     "test": "npm run lint",
     "build": "webpack",
