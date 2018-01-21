@@ -6,7 +6,7 @@ export const RECEIVE_ARTICLE = 'RECEIVE_ARTICLE'
 export const CURRENT_ID = 'CURRENT_ID'
 
 
-//id »ñÈ¡
+//id ï¿½ï¿½È¡
 export const currentId = (id) => ({
 	type: CURRENT_ID,
 	id

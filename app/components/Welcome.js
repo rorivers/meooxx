@@ -10,7 +10,7 @@ import Player from './MusicPlayer'
 
 
 //topic content
-import TopicContent from './Topiccontent'
+import TopicContent from './TopicContent'
 
 
  
