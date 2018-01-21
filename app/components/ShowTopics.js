@@ -12,7 +12,7 @@ import { Pagination, Spin } from "antd";
 import "../main.css";
 
 //breadnav
-import BreadNav from "./Breadnav";
+import BreadNav from "./BreadNav";
 //fetch action
 import { fetchArticle } from "../actions/topicid";
 import { fetchIfNeeded, fetchTopics } from "../actions/fetchTopic";
