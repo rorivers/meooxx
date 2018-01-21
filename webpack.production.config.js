@@ -55,11 +55,11 @@ module.exports = {
   
   plugins: [
     new webpack.optimize.DedupePlugin(),
-    new uglifyJsPlugin({
+   /*  new uglifyJsPlugin({
       compress: {
         warnings: false
       }
-    }),
+    }), */
     new webpack.DefinePlugin({
       'process.env': {
         NODE_ENV: JSON.stringify('production')
