@@ -3,12 +3,12 @@ import { Redirect } from 'react-router-dom'
 
 
 
-import { login } from '../actions/login'
+import { login } from '../actions/Login'
 import { connect } from 'react-redux'
 //Row Badge
 import {Message,Badge, Row , Col,Form, Input, Checkbox, Icon,Button} from 'antd'
 //已经登录状态处理
-import LoggedInfo from './loggedinfo'
+import LoggedInfo from './LoggedInfo'
 
 
 //FormItem

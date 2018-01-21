@@ -1,6 +1,6 @@
 import React from 'react'
-import Welcome from '../components/welcome'
-import Login from '../components/login'
+import Welcome from '../components/Welcome'
+import Login from '../components/Login'
 import { Route, Redirect, Switch } from 'react-router-dom'
 
 
