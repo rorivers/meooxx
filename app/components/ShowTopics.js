@@ -179,7 +179,7 @@ class ShowTopics extends Component {
               <Link
                 onClick={() => this.handleClick(topic.id)}
                 key={index}
-                to={`/nav/article/${topic.id}`}
+                to={`/main/article/${topic.id}`}
               >
                 <Topic ind={index} topic={topic} key={index} />
               </Link>
