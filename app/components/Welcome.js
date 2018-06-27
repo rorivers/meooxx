@@ -12,7 +12,7 @@ import Player from "./MusicPlayer";
 import TopicContent from "./TopicContent";
 
 import { connect } from "react-redux";
-import { Redirect, Link, Route } from "react-router-dom";
+import { Link, Route } from "react-router-dom";
 import { signout } from "../actions/login";
 import PersonalProfile from "../components/PersonalProfile";
 import ShowTopics from "../components/ShowTopics";
@@ -29,10 +29,16 @@ class Home extends Component {
     history.push("/login");
   };
   render() {
-    const { dispatch, match, user, isAuth, article } = this.props;
+    const {
+      dispatch,
+      match,
+      user,
+      // isAuth,
+      article
+    } = this.props;
     const loggedUser = sessionStorage.getItem("user", user);
 
-    if (!isAuth && !loggedUser) return <Redirect push to="/login" />;
+    //if (!isAuth && !loggedUser) return <Redirect push to="/login" />;
     if (!loggedUser) {
       sessionStorage.setItem("user", user);
     }
@@ -42,7 +48,7 @@ class Home extends Component {
         <Header>
           <Menu theme="dark" mode="horizontal">
             <Menu.Item key="4">
-              <Link to="/nav">nav</Link>
+              <Link to="/main">nav</Link>
             </Menu.Item>
             <Menu.Item key="1">
               <Link to={`${match.url}/showtopics`}>Showtopics</Link>
@@ -88,7 +94,7 @@ class Home extends Component {
             >
               <Route
                 exact
-                path="/nav"
+                path="/main"
                 render={() => (
                   <div
                     style={{
@@ -96,7 +102,7 @@ class Home extends Component {
                       margin: "10% 30%"
                     }}
                   >
-                    <span className="nav-username">{user}</span>
+                    <span className="nav-username">{user || "anony"}</span>
                     <br />
                     <p>
                       love you <Player />

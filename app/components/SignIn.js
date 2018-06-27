@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Redirect } from "react-router-dom";
-import { login } from "../actions/login"; 
+import { login } from "../actions/login";
 import { connect } from "react-redux";
 
 //Row Badge
@@ -90,7 +90,7 @@ class Login extends Component {
     if (user) {
       return <LoggedInfo user={"hello"} />;
     }
-    if (isAuth && !user) return <Redirect push to="/nav/showTopics" />;
+    if (isAuth && !user) return <Redirect push to="/main/showTopics" />;
     return (
       <div>
         <h1

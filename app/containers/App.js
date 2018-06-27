@@ -9,13 +9,9 @@ const App = () => {
 	return	(
 		<div>
 		<Switch>
+				<Route path='/main' component={Welcome} />
 				<Route path='/login' component={Login} />
-				<Route path='/nav' component={Welcome} />
-				
-					
-				<Redirect from='*'  to='/nav' /> 
-					
-				
+				<Redirect from='*'  to='/main/showTopics' /> 
 		</Switch>  
 		</div>
 			
