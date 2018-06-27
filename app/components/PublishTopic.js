@@ -80,7 +80,7 @@ class PublishTopic extends Component {
             >
               <Link
                 onClick={this.handleLinkClick}
-                to={`/nav/article/${newArticleId}`}
+                to={`/main/article/${newArticleId}`}
               >
                 新帖子出炉，去看看
               </Link>

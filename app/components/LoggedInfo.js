@@ -33,7 +33,7 @@ class LoggedInfo extends React.Component {
     const { time, shouldRedirect } = this.state;
 
     if (shouldRedirect) {
-      return <Redirect push to="/nav/showTopics" />;
+      return <Redirect push to="/main/showTopics" />;
     }
     return (
       <h1>

@@ -50,7 +50,7 @@ const ProfileModal = props => {
               <Link
                 onClick={() => handleArticleClick(topic.id)}
                 key={index}
-                to={`/nav/article/${topic.id}`}
+                to={`/main/article/${topic.id}`}
               >
                 <Topic ind={index} topic={topic} key={index} />
               </Link>
@@ -66,7 +66,7 @@ const ProfileModal = props => {
               <Link
                 onClick={() => handleArticleClick(topic.id)}
                 key={index}
-                to={`/nav/article/${topic.id}`}
+                to={`/main/article/${topic.id}`}
               >
                 <Topic ind={index} topic={topic} key={index} />
               </Link>

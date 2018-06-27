@@ -13,7 +13,7 @@ const MessagesItem = props => {
     <div className="profile-messageItem">
       <span>
         {author.loginname} 回复了你的话题
-        <Link to={`/nav/article/${topic.id}`}>{topic.title}</Link>
+        <Link to={`/main/article/${topic.id}`}>{topic.title}</Link>
       </span>
     </div>
   );
