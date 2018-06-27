@@ -1,5 +1,4 @@
-﻿# ReactSPA[![Build Status](https://travis-ci.org/meooxx/ReactSPA.svg?branch=master)](https://travis-ci.org/meooxx/meooxx)
-> 使用React全家桶SPA
+﻿# ReactSPA[![Build Status](https://travis-ci.org/meooxx/meooxx.svg?branch=master)](https://travis-ci.org/meooxx/meooxx)
 ## [在线 github page 地址](https://meooxx.github.io/meooxx/)
 ## 开始
 ```
@@ -34,8 +33,12 @@
 * 支持浏览器自动刷新
 * 用Redux管理状态流
 ## ? 一点疑问
-> 用redux管理数据流的过程中, 难免会用到异步。这里用的是cnode的api, 问的是:比如说当通过post accesstoken获取用户信息的时候,有个 login按钮，当点击按钮的时候回发起异步的action, 我想通过这个返回的信息作出一些判断, 失败成功之类的. 但下面的代码又是同步的. 比异步抓取动作快一点. 导致没有获得返回数据之前就会执行, 会出现些错误. 实在想不到解决的方法,用了另外一种不优雅的替代方法, 尴尬.
- 
+> （3月）补充说明: 在modal 框中的这种玩法， 通过props 这种方式应该是解决不了的 
+
+<del>~~用redux管理数据流的过程中, 难免会用到异步。这里用的是cnode的api, 问的是:比如说当通过post accesstoken获取用户信息的时候,有个 login按钮，当点击按钮的时候回发起异步的action, 我想通过这个返回的信息作出一些判断, 失败成功之类的. 但下面的代码又是同步的. 比异步抓取动作快一点. 导致没有获得返回数据之前就会执行, 会出现些错误. 实在想不到解决的方法,用了另外一种不优雅的替代方法, 尴尬.
+ 用redux管理数据流的过程中, 难免会用到异步。这里用的是cnode的api, 问的是:比如说当通过post accesstoken获取用户信息的时候,有个 login按钮，当点击按钮的时候回发起异步的action, 我想通过这个返回的信息作出一些判断, 失败成功之类的. 但下面的代码又是同步的. 比异步抓取动作快一点. 导致没有获得返回数据之前就会执行, 会出现些错误. 实在想不到解决的方法,用了另外一种不优雅的替代方法, 尴尬.
+ ~~
+ <del>
 ## end
 
 * 如果你能提出一些批评或者建议 非常感谢！
