@@ -1,71 +1,71 @@
-const webpack = require('webpack');
-const path = require('path');
-const OpenBrowserPlugin = require('open-browser-webpack-plugin');
-
+const webpack = require("webpack");
+const path = require("path");
 
 module.exports = {
+  mode: 'development',
+
   devServer: {
     historyApiFallback: true,
     hot: true,
     inline: true,
     progress: true,
-    contentBase: './app',
-    port: 8080
-		
+    contentBase: "./app",
+    port: 8123
   },
-	
-  entry:{
-		index:[ 'webpack/hot/dev-server',
-		'webpack-dev-server/client?http://localhost:8080',
-    path.resolve(__dirname, 'app/main.jsx')],
-		
-		
-		
-	}, 
+
+  entry: {
+    index: [
+      "webpack/hot/dev-server",
+      "webpack-dev-server/client?http://localhost:8080",
+      path.resolve(__dirname, "app/main.jsx")
+    ]
+  },
   output: {
-    path: path.resolve(__dirname, 'build'),
-    publicPath: '/',
-    filename: './bundle.js'
+    path: path.resolve(__dirname, "build"),
+    publicPath: "/",
+    filename: "./bundle.js"
   },
   module: {
-    loaders: [
-      { test: /\.css$/, 
-			
-			loaders:
-				[
-					'style-loader',
-					'css-loader?importLoaders=1',
-          'postcss-loader'
-				]
-				
-			},
-				
-      { test: /\.js[x]?$/, include: path.resolve(__dirname, 'app'), exclude: /node_modules/, loader: 'babel-loader' },
-			
-			{
-				test:/\.(jpeg|png|jpg|gif)$/,
-				loader:"url-loader?limit=8192&name=images/[name].[ext]"},
-				
-			//×ÖÌå
-			{
-          // ×¨¹©iconfont·½°¸Ê¹ÓÃµÄ£¬ºóÃæ»á´øÒ»´®Ê±¼ä´Á£¬ÐèÒªÌØ±ðÆ¥Åäµ½
-          test: /\.(woff|woff2|svg|eot|ttf)\??.*$/,
-          loader: 'url-loader?limit=8192&name=[path][name].[ext]'
+    rules: [
+      {
+        test: /\.css$/,
+        loader: [
+          "style-loader",
+          "css-loader",
+          "postcss-loader"
+        ]
+      },
+
+      {
+        test: /\.js[x]?$/,
+        include: path.resolve(__dirname, "app"),
+        exclude: /node_modules/,
+        loader: "babel-loader"
+      },
+
+      {
+        test: /\.(jpeg|png|jpg|gif)$/,
+        loader: "url-loader",
+        options: {
+          limit: 8192,
+          name: 'images/[name].[ext]',
         }
+      },
+
+      //ï¿½ï¿½ï¿½ï¿½
+      {
+        // ×¨ï¿½ï¿½iconfontï¿½ï¿½ï¿½ï¿½Ê¹ï¿½ÃµÄ£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Òªï¿½Ø±ï¿½Æ¥ï¿½äµ½
+        test: /\.(woff|woff2|svg|eot|ttf)\??.*$/,
+        loader: "url-loader",
+        options: {
+          limit: 8192,
+          name: 'images/[name].[ext]',
+        }
+      }
     ]
-		/* postcss() {
-			return [
-				require('precss'),
-				require('autoprefixer')
-			];
-		} */
   },
-	
-  resolve: {
-    extensions: ['', '.js', '.jsx']
-  },
+
   plugins: [
-    new webpack.HotModuleReplacementPlugin(),
-    new OpenBrowserPlugin({ url: 'http://localhost:8080' }),
+    new webpack.HotModuleReplacementPlugin()
   ]
 };
